@@ -1,0 +1,25 @@
+{
+  "name": "kazap-academy",
+  "version": "1.0.0",
+  "description": "API para o projeto final do Academy 2021 da Kazap!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gusm4n/backAcademy.git"
+  },
+  "author": "Felipe Gusmão",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gusm4n/backAcademy/issues"
+  },
+  "homepage": "https://github.com/Gusm4n/backAcademy#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0"
+  }
+}
