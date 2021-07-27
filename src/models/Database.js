@@ -41,7 +41,7 @@ class Database {
 
             client.close()
 
-            return document
+            return documents
 
         } catch (error) {
             throw new Error(error)
@@ -56,17 +56,20 @@ class Database {
 
             client.close()
 
-            return document
+            return documents
         } catch (error) {
             throw new Error(error)
         }
     }
 
     async findOne(queryFilter) {
+        const { client, collection } = await this._getMongoClientAndCollection()
+
         try {
-            const documents = await collection.findOne(queryFilter)
+            const document = await collection.findOne(queryFilter)
 
             client.close()
+
 
             return document
         } catch (error) {

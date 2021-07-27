@@ -1,4 +1,4 @@
-const objectId = require('mongodb').ObjectId
+const ObjectId = require('mongodb').ObjectId
 
 const safeObjectId = id => {
     try{

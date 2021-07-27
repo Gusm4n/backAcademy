@@ -7,11 +7,11 @@ const methods = {
         const products = new Products()
 
         try {
-            const products = await products.list()
+            const productsList = await products.list()
 
-            response.status(httpStatus.OK).json(products)
+            response.status(httpStatus.OK).json(productsList)
         } catch (error) {
-            response.status(httpStatus.INTERNAL_SERVER_ERROR).json(error)
+             response.status(httpStatus.INTERNAL_SERVER_ERROR).json(error)
         }
     },
 
@@ -35,8 +35,8 @@ const methods = {
 
     async show(request, response) {
         const { id } = request.params
+        
         const convertedObjectId = safeObjectId(id)
-
         const products = new Products()
 
         try {
