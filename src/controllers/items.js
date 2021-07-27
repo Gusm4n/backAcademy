@@ -1,3 +1,5 @@
+const { Items } = require('../models')
+
 const methods = {
     async list(request, response) {
         response.status(200).json({
