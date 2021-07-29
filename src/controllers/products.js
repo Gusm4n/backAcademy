@@ -76,9 +76,9 @@ const methods = {
         const products = new Products()
 
         try {
-            const updateProducts = await products.updateOne({ _id: convertedObjectId }, { deletedAt: Date.now() })
+            const destroyProducts = await products.updateOne({ _id: convertedObjectId }, { deletedAt: Date.now() })
 
-            response.status(httpStatus.NO_CONTENT).json(updateProducts)
+            response.status(httpStatus.NO_CONTENT).json()
         } catch (error) {
             response.status(httpStatus.INTERNAL_SERVER_ERROR).json(error)
         }
